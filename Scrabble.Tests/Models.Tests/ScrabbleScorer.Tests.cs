@@ -35,7 +35,7 @@ namespace Scrabble.Tests
             string result = inputWord.GetWordString();
 
             //Assert
-            Assert.AreEqual(inputWord, result);
+            Assert.AreEqual(newTestString, result);
         }
     }
 }
