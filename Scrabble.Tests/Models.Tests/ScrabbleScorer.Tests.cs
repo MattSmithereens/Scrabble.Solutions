@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Scrabble.Models;
 
 namespace Scrabble.Tests
@@ -69,6 +70,19 @@ namespace Scrabble.Tests
             //Assert
             CollectionAssert.AreEqual(testArray, result);
 
+        }
+
+        [TestMethod]
+        public void GetScore_ReturnScore_Int()
+        {
+            //Arrange
+            ScrabbleScorer initialScore = new ScrabbleScorer();
+
+            //Act
+            int result = initialScore.GetScore();
+
+            //Assert
+            Assert.AreEqual(0, result);
         }
     }
 }
