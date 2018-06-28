@@ -39,6 +39,23 @@ namespace Scrabble.Tests
         }
 
         [TestMethod]
+        public void StringToLower_ReturnStringLower_String()
+        {
+            //Arrange
+            string testString = "CAT";
+            ScrabbleScorer inputWord = new ScrabbleScorer(testString);
+
+            //Act
+            string lowerTest = "cat";
+            string result = inputWord.StringToLower(testString);
+            //char[] testArray = { 'c', 'a', 't' };
+            //char[] charArray = inputWord.StringToArray(inputWord.GetWordString());
+
+            //Assert
+            Assert.AreEqual(lowerTest, result);
+        }
+
+        [TestMethod]
         public void StringToArray_ReturnStringArray_Char()
         {
             //Arrange
@@ -47,10 +64,10 @@ namespace Scrabble.Tests
 
             //Act
             char[] testArray = { 'c', 'a', 't' };
-            char[] charArray = inputWord.StringToArray(inputWord.GetWordString());
+            char[] result = inputWord.StringToArray(inputWord.GetWordString());
 
             //Assert
-            CollectionAssert.AreEqual(testArray, charArray);
+            CollectionAssert.AreEqual(testArray, result);
 
         }
     }

@@ -31,18 +31,24 @@ namespace Scrabble.Models
             return _wordString;
         }
 
+        public string StringToLower(string wordString)
+        {
+            string wordLower = wordString.ToLower();
+            return wordLower;
+        }
+
+
         public char[] StringToArray(string wordString)
         {
-            char[] wordArray = wordString.ToCharArray();
+            char[] wordArray = StringToLower(wordString).ToCharArray();
             return wordArray;
         }
 
-        public bool CheckDictionary(string wordString)
-        {
-            char[] wordArray = StringToArray(wordString);
-            foreach(char[] letter in wordArray)
-                
-
-        }
+    //    public bool CheckDictionary(string wordString)
+    //    {
+    //        char[] wordArray = StringToArray(wordString);
+    //        foreach(char[] letter in wordArray)
+              
+    //    }
     }
 }   
