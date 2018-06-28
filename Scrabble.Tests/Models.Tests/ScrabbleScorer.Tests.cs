@@ -48,9 +48,6 @@ namespace Scrabble.Tests
             //Act
             char[] testArray = { 'c', 'a', 't' };
             char[] charArray = inputWord.StringToArray(inputWord.GetWordString());
-            Console.WriteLine(charArray);
-
-           
 
             //Assert
             CollectionAssert.AreEqual(testArray, charArray);
