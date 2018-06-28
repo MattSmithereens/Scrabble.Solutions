@@ -14,10 +14,10 @@ namespace Scrabble.Models
             _wordString = wordString;
         }
 
-        //public void SetWordString(string newWordString)
-        //{
-        //    _wordString = newWordString;
-        //}
+        public void SetWordString(string newWordString)
+        {
+            _wordString = newWordString;
+        }
 
         public string GetWordString()
         {
