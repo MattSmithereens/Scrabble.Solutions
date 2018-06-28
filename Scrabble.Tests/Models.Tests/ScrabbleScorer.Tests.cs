@@ -37,5 +37,24 @@ namespace Scrabble.Tests
             //Assert
             Assert.AreEqual(newTestString, result);
         }
+
+        [TestMethod]
+        public void StringToArray_ReturnStringArray_Char()
+        {
+            //Arrange
+            string testString = "cat";
+            ScrabbleScorer inputWord = new ScrabbleScorer(testString);
+
+            //Act
+            char[] testArray = { 'c', 'a', 't' };
+            char[] charArray = inputWord.StringToArray(inputWord.GetWordString());
+            Console.WriteLine(charArray);
+
+           
+
+            //Assert
+            CollectionAssert.AreEqual(testArray, charArray);
+
+        }
     }
 }

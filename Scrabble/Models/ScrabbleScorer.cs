@@ -23,5 +23,11 @@ namespace Scrabble.Models
         {
             return _wordString;
         }
+
+        public char[] StringToArray(string wordString)
+        {
+            char[] wordArray = wordString.ToCharArray();
+            return wordArray;
+        }
     }
-}
+}   
