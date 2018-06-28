@@ -45,17 +45,49 @@ namespace Scrabble.Models
             return wordArray;
         }
 
-        public void CheckScore(string wordString)
+        public int CheckScore(string wordString, int newScore)
         {
+            newScore = 0;
             char[] wordArray = StringToArray(StringToLower(wordString));
             foreach(char letter in wordArray)
             {
                 if (_worth01.Contains(letter))
                 {
-                    _score += 1;
+                    newScore += 1;
+                }
+                else if (_worth02.Contains(letter))
+                {
+                    newScore += 2;
+                }
+                else if (_worth03.Contains(letter))
+                {
+                    newScore += 3;
+                }
+                else if (_worth04.Contains(letter))
+                {
+                    newScore += 4;
+                }
+                else if (_worth05.Contains(letter))
+                {
+                    newScore += 5;
+                }
+                else if (_worth08.Contains(letter))
+                {
+                    newScore += 8;
+                }
+                else if (_worth10.Contains(letter))
+                {
+                    newScore += 10;
                 }
             }
+            return newScore;
         }
+
+        public void SetScore(int newScore)
+        {
+            _score = newScore;
+        }
+
 
         public int GetScore()
         {

@@ -84,5 +84,26 @@ namespace Scrabble.Tests
             //Assert
             Assert.AreEqual(0, result);
         }
+
+        [TestMethod]
+        public void CheckScore_ReturnScoreSum_Int()
+        {
+            //Arrange
+            string testString = "cat";
+            int testScore = 0;
+            ScrabbleScorer inputWord = new ScrabbleScorer(testString);
+
+            //Act
+            string gotWord = inputWord.GetWordString();
+            int finalScore = inputWord.CheckScore(gotWord, testScore);
+            inputWord.SetScore(finalScore);
+            int result = inputWord.GetScore();
+            Console.WriteLine(result);
+
+
+
+            //Assert
+            Assert.AreEqual(5, result);
+        }
     }
 }
