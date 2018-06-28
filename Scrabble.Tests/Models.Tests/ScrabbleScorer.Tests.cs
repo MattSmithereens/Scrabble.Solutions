@@ -20,7 +20,22 @@ namespace Scrabble.Tests
 
             //Assert
             Assert.AreEqual(testString, result);
+        }
 
+        [TestMethod]
+        public void SetWordString_ReturnNewWordString_String()
+        {
+            //Arrange
+            string testString = "cat";
+            ScrabbleScorer inputWord = new ScrabbleScorer(testString);
+
+            //Act
+            string newTestString = "dog";
+            inputWord.SetWordString(newTestString);
+            string result = inputWord.GetWordString();
+
+            //Assert
+            Assert.AreEqual(inputWord, result);
         }
     }
 }
